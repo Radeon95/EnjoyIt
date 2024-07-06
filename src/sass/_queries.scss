@@ -1,0 +1,196 @@
+// For Tablets
+
+@media (max-width: $bp-average) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .search-results {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 40%;
+    z-index: 10;
+    margin-top: 10rem;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in;
+  }
+
+  .search {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 39%;
+    transform: translateX(-100%);
+
+    transition: all 0.3s ease-in;
+
+    &__field {
+      margin-right: 5rem;
+      width: inherit;
+    }
+  }
+
+  .btn__mobile-search {
+    display: flex;
+  }
+
+  .sidebar .search-results,
+  .sidebar .search {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  .sidebar .btn__mobile-search {
+    display: none;
+  }
+
+  .sidebar .btn__mobile-close {
+    display: flex;
+  }
+
+  // Making upload form responsive
+
+  .upload {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    & label {
+      width: 80;
+    }
+
+    &__heading {
+      justify-self: center;
+    }
+
+    .ingredients {
+      align-items: center;
+    }
+
+    .input-fields input {
+      width: 120;
+    }
+  }
+
+  // Making upload form properly visible
+
+  .add-recipe-window {
+    position: absolute;
+    top: 80%;
+    width: 70rem;
+  }
+}
+
+// For Smaller Tablets
+
+@media (max-width: $bp-small) {
+  .search-results {
+    width: 50%;
+  }
+
+  .search {
+    width: 49%;
+  }
+
+  .header span {
+    display: none;
+  }
+
+  .nav__btn {
+    margin-right: -2rem;
+  }
+
+  .nav__btn svg {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .nav__item:not(:last-child) {
+    padding-right: 1rem;
+  }
+
+  .recipe {
+    &__title {
+      font-size: 2.6rem;
+      padding: 1rem 2rem;
+    }
+
+    &__details {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+    &__info {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .btn--tiny {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  // Making upload form responsive
+  .upload {
+    .input-fields input {
+      width: 90;
+    }
+  }
+
+  // Making upload form properly visible
+  .add-recipe-window {
+    width: 55rem;
+    padding: 5rem 3rem;
+  }
+}
+
+// For Mobile devices
+
+@media (max-width: $bp-smallest) {
+  .search-results {
+    width: 65%;
+  }
+
+  .search {
+    width: 63.5%;
+  }
+
+  .sidebar .nav {
+    display: none;
+  }
+
+  .recipe {
+    // Ingredient
+    &__ingredient-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // Making upload form responsive
+  .upload {
+    &__column {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .input-fields {
+      gap: 0 1rem;
+    }
+
+    .input-fields input {
+      width: 60;
+    }
+  }
+
+  // Making upload form properly visible
+  .add-recipe-window {
+    width: 40rem;
+  }
+}

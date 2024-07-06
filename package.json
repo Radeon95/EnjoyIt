@@ -1,0 +1,23 @@
+{
+  "name": "enjoyit",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Radu Bitlan",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "@types/core-js": "^2.5.8",
+    "@types/regenerator-runtime": "^0.13.5",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "core-js": "^3.36.1",
+    "fractional": "^1.0.0",
+    "fracty": "^1.0.11",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
